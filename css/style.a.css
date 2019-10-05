@@ -1,0 +1,96 @@
+.jumbotron {
+  /*https://www.ottawachamberorchestra.com/index.php?content=about*/
+  /* background-image: url("https://www.ottawachamberorchestra.com/media/library/pictures/2015-2016/2016-02-06_ocoConcertDominionChalmersSchubertUnfinished.jpg"); */
+  background-image: url("../images/orchestra_dark.jpg");
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-color: #000;
+  border-radius: 0;
+}
+
+.welcome {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  padding: 3rem;
+  border-radius: 20px;
+}
+
+#tour > .row:nth-child(odd) {
+  background: #ffe6ca;
+}
+
+#tour > .row:nth-child(even) {
+  background: #fff6eb;
+}
+
+#tour > .row {
+  border: 1px solid #000;
+  border-top: 0;
+  border-bottom: 1px dashed #000;
+  padding: 12px;
+}
+
+#tour > .row:first-child {
+  text-align: center;
+  font-weight: bold;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #000;
+  font-size: 1.1rem;
+}
+
+#tour > .row:nth-child(2) {
+  border-top: 1px solid #000;
+}
+
+#tour > .row:last-child {
+  border-bottom: 1px solid #000;
+}
+
+#tour .row:not(:first-child) :last-child,
+#tour .row:not(:first-child) :first-child {
+  white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+  
+  /*reduce conductor info size then center it*/
+  #conductor {
+    width: 50%;
+    margin: auto;
+  }
+  
+}
+
+@media (max-width: 767px) {
+  
+  .welcome h1 {
+    font-size: 9vw;
+  }
+  
+  /*get rid of tour schedule column headers and instead put the header titles before each individual column*/
+  #tour > div:first-child {
+    display: none;
+  }
+  
+  #tour .row > :nth-child(1):before {
+    content: "Date: ";
+  }
+  
+  #tour .row > :nth-child(2):before {
+    content: "Venue: ";
+  }
+  
+  #tour .row > :nth-child(3):before {
+    content: "Location: ";
+  }
+  
+  #tour .row > :nth-child(4):before {
+    content: "Time: ";
+  }
+  
+  #tour .row > *:before {
+    font-weight: bold;
+  }
+  
+}

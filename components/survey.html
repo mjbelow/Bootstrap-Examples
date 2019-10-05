@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="..">
+<title>Customer Survey</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="css/style.b.css">
+<script type="application/javascript">
+function toggle_emp(bool)
+{
+	document.getElementById("emp_list").disabled=bool;
+	document.getElementById("emp_name").disabled=!bool;
+}
+</script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-light fixed-top">
+
+  <a class="navbar-brand" href="#"></a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_links">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="nav_links">
+  
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Buy</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">New</a>
+          <a class="dropdown-item" href="#">Used</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+
+    <form action="components/survey.html">
+      <button class="btn btn-primary" type="submit">Take Survey</button>
+    </form>
+
+  </div>
+
+</nav>
+
+<form onreset="toggle_emp(false)" class="my-form">
+ 
+  <fieldset>
+    <legend>Salesperson</legend>
+	
+	<p>Q1. Which employee helped you choose your car? (if name isn't listed, please fill in their name.)</p>
+	<select name="Q1" id="emp_list">	
+	  <option disabled selected>-- employee name --</option>
+	  <option value="John Doe">John Doe</option>
+	  <option value="Jane Doe">Jane Doe</option>
+	</select>
+	
+	<br>
+	<br>
+	<input type="checkbox" onchange="toggle_emp(this.checked)" autocomplete="off">Employee isn't listed.
+	<br>
+	<br>
+	
+	<fieldset id="emp_name" disabled>
+	  First name:
+	  <br>
+	  <input type="text" name="Q1.1" value>
+	  <br>
+	  Last name:
+	  <br>
+	  <input type="text" name="Q1.2" value>
+	</fieldset>
+	
+	<p>Q2. Salesperson provided adequate information concerning the vehicle?</p>
+	<ul>
+	  <li>
+		<input type="radio" name="Q2" value="-2">Strongly Disagree
+	  </li>
+	  <li>
+		<input type="radio" name="Q2" value="-1">Disagree
+	  </li>
+	  <li>
+		<input type="radio" name="Q2" value="0">Neutral
+	  </li>
+	  <li>
+		<input type="radio" name="Q2" value="1">Agree
+	  </li>
+	  <li>
+		<input type="radio" name="Q2" value="2">Strongly Agree
+	  </li>
+	</ul>
+
+	<p>Q3. On a scale of 1-10, how friendly was the salesperson friendly? (1 being rude, 10 being friendly)</p>
+	<input type="radio" name="Q3" value="1">1
+	<input type="radio" name="Q3" value="2">2
+	<input type="radio" name="Q3" value="3">3
+	<input type="radio" name="Q3" value="4">4
+	<input type="radio" name="Q3" value="5">5
+	<input type="radio" name="Q3" value="6">6
+	<input type="radio" name="Q3" value="7">7
+	<input type="radio" name="Q3" value="8">8
+	<input type="radio" name="Q3" value="9">9
+	<input type="radio" name="Q3" value="10">10
+	
+	<p>Q4. Did you feel pressured into buying from the salesperson?</p>
+	<ul>
+	  <li>
+		<input type="radio" name="Q4" value="-2">Strongly Disagree
+	  </li>
+	  <li>
+		<input type="radio" name="Q4" value="-1">Disagree
+	  </li>
+	  <li>
+		<input type="radio" name="Q4" value="0">Neutral
+	  </li>
+	  <li>
+		<input type="radio" name="Q4" value="1">Agree
+	  </li>
+	  <li>
+		<input type="radio" name="Q4" value="2">Strongly Agree
+	  </li>
+	</ul>
+	
+	<p>Q5. Did the salesperson provide you with suitable alternatives if needed?</p>
+	<input type="radio" name="Q5" value="1">Yes
+	<input type="radio" name="Q5" value="2">No
+	<input type="radio" name="Q5" value="3">Not Needed
+	
+  </fieldset>
+  <fieldset>
+    <legend>Vehicle</legend>
+	
+	
+	<p>Q6. What condition was the car in upon delivery?</p>
+	<ul>
+	  <li>
+		<input type="radio" name="Q6" value="-2">Awful
+	  </li>
+	  <li>
+		<input type="radio" name="Q6" value="-1">Poor
+	  </li>
+	  <li>
+		<input type="radio" name="Q6" value="0">Adequate
+	  </li>
+	  <li>
+		<input type="radio" name="Q6" value="1">Good
+	  </li>
+	  <li>
+		<input type="radio" name="Q6" value="2">Excellent
+	  </li>
+	</ul>
+
+	<p>Q7. Car was delivered on time?</p>
+	<input type="radio" name="Q7" value="1">Yes
+	<input type="radio" name="Q7" value="2">No
+
+
+	<p>Q8. Overall, how satisfied are you with your vehicle?</p>
+	<ul>
+	  <li>
+		<input type="radio" name="Q8" value="-2">Greatly Dissatisfied
+	  </li>
+	  <li>
+		<input type="radio" name="Q8" value="-1">Dissatisfied
+	  </li>
+	  <li>
+		<input type="radio" name="Q8" value="0">Neutral
+	  </li>
+	  <li>
+		<input type="radio" name="Q8" value="1">Satisfied
+	  </li>
+	  <li>
+		<input type="radio" name="Q8" value="2">Greatly Satisfied
+	  </li>
+	</ul>
+  </fieldset>
+	
+  <input type="submit" value="Submit">
+  <input type="reset" value="Reset">
+  
+</form> 
+
+</body>
+</html>
