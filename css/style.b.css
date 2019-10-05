@@ -95,3 +95,26 @@ nav .dropdown-menu {
 .carousel-indicators li {
 	background-color: #003479;
 }
+
+.featured h1 {
+  border: 2px solid;
+  text-align: center;
+  background: rgba(255,255,255,0.8);
+  margin: 0;
+}
+  
+.featured .tab-pane {
+  border:2px solid;
+}
+
+.featured .nav.car-type .nav-link {
+	font-size: 1.1rem;
+}
+
+.featured .nav.car-type .nav-link.active {
+  color: #003479;
+  border-style: solid;
+  border-width: 0 2px;
+  border-radius: 0;
+  background: rgba(255,255,255,0.8);
+}
