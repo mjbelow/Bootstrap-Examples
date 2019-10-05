@@ -22,6 +22,7 @@ function toggle_emp(bool)
 
 <body>
 
+
 <nav class="navbar navbar-expand-md navbar-light fixed-top">
 
   <a class="navbar-brand" href="#"></a>
@@ -34,7 +35,7 @@ function toggle_emp(bool)
   
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="lab4b.html">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Buy</a>
@@ -43,8 +44,12 @@ function toggle_emp(bool)
           <a class="dropdown-item" href="#">Used</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Contact Us</a>
+        <div class="dropdown-menu mine">
+          <a class="dropdown-item" href="tel:+18658675309">Phone: (865) 867-5309</a>
+          <a class="dropdown-item" href="mailto:sales@fordknoxville.com">Email: sales@fordknoxville.com</a>
+        </div>
       </li>
     </ul>
 
@@ -55,6 +60,8 @@ function toggle_emp(bool)
   </div>
 
 </nav>
+
+
 
 <form onreset="toggle_emp(false)" class="my-form">
  
